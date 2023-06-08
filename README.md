@@ -34,3 +34,6 @@ Para contribuir com este projeto, faça um fork do repositório, crie uma branch
 
 Licença :balance_scale:
 Esta aplicação é licenciada sob a licença MIT. Veja o arquivo de LICENÇA para mais detalhes.
+
+Criado por :pencil2:
+Jonathan Costa
