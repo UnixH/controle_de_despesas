@@ -1,0 +1,36 @@
+Controle de Despesas
+
+Patch 1.1.0 - Novas Funcionalidades
+
+Resumo
+Este patch introduz novas funcionalidades no aplicativo de controle de despesas, incluindo categorias de transações e filtragem de transações. 
+Agora os usuários podem categorizar suas transações e filtrá-las com base no tipo (despesa ou receita) e categoria.
+
+Detalhes
+
+Adição de Categorias de Transações
+
+- Agora é possível atribuir uma categoria a cada transação adicionada.
+- Ao adicionar uma nova transação, os usuários podem selecionar uma categoria específica para a transação.
+- As categorias podem ser personalizadas pelo usuário com base em suas necessidades.
+- As categorias são exibidas nas transações na lista de transações e no filtro de transações.
+
+Filtragem de Transações
+
+- Adicionada a capacidade de filtrar as transações com base no tipo (despesa ou receita) e categoria.
+- Os usuários podem selecionar o tipo de transação (todos, receitas ou despesas) e a categoria desejada no filtro de transações.
+- Ao aplicar um filtro, apenas as transações correspondentes ao tipo e categoria selecionados são exibidas.
+- Isso permite aos usuários visualizar e analisar suas transações com mais precisão com base em diferentes critérios.
+
+Melhorias Gerais
+
+- Pequenas melhorias e correções de bugs foram implementadas para aprimorar a experiência do usuário e garantir a estabilidade do aplicativo.
+
+
+Atualização do Código
+- O código JavaScript foi atualizado para lidar com as novas funcionalidades de categorias e filtragem de transações.
+- O código HTML foi modificado para incluir os campos de entrada e seleção necessários para as categorias e filtragem.
+- O código CSS foi ajustado para estilizar os novos elementos de interface do usuário e melhorar a aparência geral do aplicativo.
+
+Agora os usuários têm mais controle sobre suas transações e podem visualizá-las de maneira mais organizada e filtrada. 
+Essas melhorias facilitam o gerenciamento de despesas e ajudam os usuários a tomar decisões financeiras mais informadas.
