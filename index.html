@@ -3,33 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
     <link rel="stylesheet" href="./style.css" />
     <title>Controle de despesas</title>
   </head>
   <body>
-    <h2>Controle de despesas</h2>
+    <h2><i class='bx bx-wallet'></i> Controle de despesas</h2>
 
     <div class="container">
-      <h4>Saldo atual</h4>
+      <h4><i class='bx bx-coin'></i> Saldo atual</h4>
       
       <h1 id="balance" class="balance">R$ 0.00</h1>
 
       <div class="inc-exp-container">
         <div>
-          <h4>Receitas</h4>
+          <h4><i class='bx bx-money'></i> Receitas</h4>
           <p id="money-plus" class="money plus">+ R$0.00</p>
         </div>
 
         <div>
-          <h4>Despesas</h4>
+          <h4><i class='bx bx-money'></i> Despesas</h4>
           <p id="money-minus" class="money minus">- R$0.00</p>
         </div>
       </div>
 
-      <h3>Filtrar transações</h3>
+      <h3><i class='bx bx-list-check'></i> Transações</h3>
       
-      <div class="form-control">
-        <label for="filter-type">Tipo</label>
+      <div>
+        <label for="filter-type">Filtrar por tipo:</label>
         <select id="filter-type">
           <option value="all">Todos</option>
           <option value="income">Receitas</option>
@@ -37,22 +38,17 @@
         </select>
       </div>
 
-      <div class="form-control">
-        <label for="filter-category">Categoria</label>
+      <div>
+        <label for="filter-category">Filtrar por categoria:</label>
         <select id="filter-category">
           <option value="all">Todas</option>
-          <option value="Salario">Salário</option>
-          <option value="Transporte">Transporte</option>
-          <option value="Alimentação">Alimentação</option>
-          <!-- Você deve adicionar as opções de categoria aqui. -->
+          <!-- Adicione as opções de categoria aqui -->
         </select>
       </div>
 
-      <h3>Transações</h3>
-      
       <ul id="transactions" class="transactions"></ul>
 
-      <h3>Adicionar transação</h3>
+      <h3><i class='bx bx-plus-circle'></i> Adicionar transação</h3>
       
       <form id="form">
         <div class="form-control">
@@ -72,7 +68,7 @@
           <input type="text" id="category" placeholder="Categoria da transação" />
         </div>
 
-        <button class="btn">Adicionar</button>
+        <button class="btn"><i class='bx bx-plus'></i> Adicionar</button>
       </form>
     </div>
 
