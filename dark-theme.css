@@ -1,0 +1,81 @@
+:root {
+    --primary-color: #36393f; /* Cor primária */
+    --secondary-color: #2f3136; /* Cor secundária */
+    --background-color: #202225; /* Cor de fundo */
+    --text-color: #ffffff; /* Cor do texto */
+    --accent-color: #7289da; /* Cor de destaque */
+  }
+  
+  body {
+    background-color: #36393f;
+    color: var(--text-color);
+  }
+  
+  .container {
+    background-color: var(--primary-color);
+  }
+  
+  h2 {
+    color: var(--accent-color);
+  }
+  
+  .inc-exp-container {
+    background-color: var(--secondary-color);
+  }
+  
+  .money.plus {
+    color: #43b581;
+  }
+  
+  .money.minus {
+    color: #f04747;
+  }
+  
+  .btn {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+  }
+  
+  .transactions li {
+    background-color: var(--secondary-color);
+    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+  }
+  
+  .transactions li.plus {
+    border-right: 5px solid #43b581;
+  }
+  
+  .transactions li.minus {
+    border-right: 5px solid #f04747;
+  }
+  
+  .transactions li:hover .delete-btn {
+    opacity: 1;
+  }
+  
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  
+  .theme-toggle i {
+    font-size: 24px;
+  }
+  
+  .dark-theme {
+    --box-shadow: 0 1px 3px rgba(255, 255, 255, 0.12), 0 1px 2px rgba(255, 255, 255, 0.24);
+  }
+  
+  .light-theme {
+    --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  

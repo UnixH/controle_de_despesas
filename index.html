@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dark-theme.css" id="theme-style" />
     <title>Controle de despesas</title>
   </head>
   <body>
-    <h2><i class='bx bx-wallet'></i> Controle de despesas</h2>
+    <h2><i class='bx bx-wallet'></i> Controle de despesas </h2>
 
     <div class="container">
       <h4><i class='bx bx-coin'></i> Saldo atual</h4>
@@ -26,7 +27,8 @@
           <p id="money-minus" class="money minus">- R$0.00</p>
         </div>
       </div>
-
+      
+      <button class="btn" id="theme-toggle"><i class='bx bx-moon'></i></button>
       <h3><i class='bx bx-list-check'></i> Transações</h3>
       
       <div>
@@ -70,8 +72,26 @@
 
         <button class="btn"><i class='bx bx-plus'></i> Adicionar</button>
       </form>
+      
     </div>
 
     <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', toggleTheme);
+
+        function toggleTheme() {
+          const themeStyle = document.getElementById('theme-style');
+          if (themeStyle.getAttribute('href') === './dark-theme.css') {
+            themeStyle.setAttribute('href', './style.css'); // Alternar para o tema claro
+            themeToggle.innerHTML = '<i class="bx bx-moon"></i>'; // Atualizar o ícone para o tema escuro
+          } else {
+            themeStyle.setAttribute('href', './dark-theme.css'); // Alternar para o tema escuro
+            themeToggle.innerHTML = '<i class="bx bx-sun"></i>'; // Atualizar o ícone para o tema claro
+          }
+        }
+      });
+    </script>
   </body>
 </html>
