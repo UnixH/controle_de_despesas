@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dark-theme.css" />
+    <title>Login</title>
+    <style>
+      body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .login-container {
+        max-width: 400px;
+        width: 90%;
+        padding: 20px;
+        background-color: var(--primary-color);
+        border-radius: 5px;
+        box-shadow: var(--box-shadow);
+      }
+
+      .login-container h1 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        color: var(--accent-color);
+      }
+
+      .logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .logo img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .form-control {
+        margin-bottom: 20px;
+      }
+
+      .form-control label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .form-control input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+      }
+
+      .form-control button {
+        padding: 10px 20px;
+        background-color: var(--accent-color);
+        color: var(--text-color);
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .error-message {
+        color: #f04747;
+        margin-bottom: 10px;
+      }
+    </style>
+    <style>
+      @media (min-width: 576px) {
+        .login-container {
+          width: 400px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .login-container {
+          width: 500px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .login-container {
+          width: 600px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo">
+        <img src="logo.svg" alt="Logo" />
+      </div>
+    <div class="login-container">
+      <div class="form-control">
+        <label for="username">Usuário</label>
+        <input type="text" id="username" required />
+      </div>
+      <div class="form-control">
+        <label for="password">Senha</label>
+        <input type="password" id="password" required />
+      </div>
+      <div class="form-control">
+        <button id="login-button"><i class='bx bx-log-in'></i> Entrar</button>
+      </div>
+      <div id="error-message" class="error-message"></div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const loginButton = document.getElementById("login-button");
+        loginButton.addEventListener("click", handleLogin);
+
+        function handleLogin(event) {
+          event.preventDefault();
+
+          const usernameInput = document.getElementById("username");
+          const passwordInput = document.getElementById("password");
+          const errorMessage = document.getElementById("error-message");
+
+          const username = usernameInput.value.trim();
+          const password = passwordInput.value.trim();
+
+          if (username === "" || password === "") {
+            errorMessage.textContent = "Preencha todos os campos.";
+          } else if (username === "admin" && password === "admin") {
+            window.location.href = "index.html";
+          } else {
+            errorMessage.textContent = "Credenciais de login inválidas.";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
